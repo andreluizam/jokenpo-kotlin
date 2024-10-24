@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
         Usuario(1), Maquina(2), Empate(3)
     }
 
-    public fun  jogarJogo(view: View){
+    public fun jogarJogo(view: View){
         if(usuarioResult == 0){
-            Toast.makeText(view.context, "Selecione uma opção", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Selecione uma opção", Toast.LENGTH_LONG).show()
             return
         }
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         val resultadoJokenpo = verificarResultado(maquinaResult,usuarioResult)
 
-        mostrarResultado(resultadoJokenpo, view, escolhaParaString(resultadoJokenpo))
+        mostrarResultado(resultadoJokenpo, escolhaParaString(maquinaResult))
 
         pontuar(resultadoJokenpo)
     }
@@ -85,16 +85,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun mostrarResultado(resultadoJokenpo: Int, view: View, escolha: String){
+    private fun mostrarResultado(resultadoJokenpo: Int, escolha: String){
         if(resultadoJokenpo == Resultado.Empate.numero){
-            Toast.makeText(view.context, "Ufa, eu também escolhi " + escolha + " Empatou !", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Ufa, eu também escolhi " + escolha + " Empatou !", Toast.LENGTH_LONG).show()
             return
         }
 
         if(resultadoJokenpo == Resultado.Maquina.numero)
-            Toast.makeText(view.context, "Haha, eu escolhi " + escolha + " Você perdeu!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Haha, eu escolhi " + escolha + " Você perdeu!", Toast.LENGTH_LONG).show()
         else
-            Toast.makeText(view.context, "Aaah, eu escolhi " + escolha + " Você ganhou!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Aaah, eu escolhi " + escolha + " Você ganhou!", Toast.LENGTH_LONG).show()
     }
 
     private fun pontuar(resultado: Int){
