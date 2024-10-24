@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtPlacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Vamos jogar Jo-ken-po!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnJogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageButton
+        android:id="@+id/btnTesoura"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="144dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Tesoura"
+        android:scaleType="centerInside"
+        android:src="@drawable/tesoura"
+        app:layout_constraintBottom_toTopOf="@+id/btnJogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989" />
+
+    <ImageButton
+        android:id="@+id/btnPedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="144dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Pedra"
+        android:scaleType="centerInside"
+        android:src="@drawable/pedra"
+        app:layout_constraintBottom_toTopOf="@+id/btnJogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.994" />
+
+    <ImageButton
+        android:id="@+id/btnPapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="143dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Papel"
+        android:scaleType="centerInside"
+        android:src="@drawable/papel"
+        app:layout_constraintBottom_toTopOf="@+id/btnJogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.972" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Escolha sua jogada:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnTesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlacar"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/escolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Sua escolha é: "
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnJogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnJogar"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="132dp"
+        android:backgroundTint="@color/black"
+        android:elevation="4dp"
+        android:onClick="jogarJogo"
+        android:text="Vamos Jogar!"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/escolha"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/escolha" />
+</androidx.constraintlayout.widget.ConstraintLayout>
